@@ -9,6 +9,7 @@ Using the ProductAdapter class I was able to adapt the products so they would be
 Using the product_item.xml file I was able to create each individual product section in the recycler view. 
 
 Link to github repo:
+https://github.com/zpulichino/cs4520-assignment1-starter-code 
 
 
 I don't believe there is anything additional needed to run this project. I had to change the SDK compiler from 33 to 34, but if you clone this repository then everything should be there.
