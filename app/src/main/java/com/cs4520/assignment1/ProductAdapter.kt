@@ -35,7 +35,7 @@ class ProductAdapter(private val productList: List<Product>) : RecyclerView.Adap
             is Product.Equipment -> {
                 holder.expiryDateTV.visibility = View.GONE
                 holder.productImageIV.setImageResource(R.mipmap.tools)
-                holder.itemView.setBackgroundColor(Color.parseColor("#EO6666"))
+                holder.itemView.setBackgroundColor(Color.parseColor("#E06666"))
             }
             is Product.Food -> {
                 if (product.expiryDate != null) {

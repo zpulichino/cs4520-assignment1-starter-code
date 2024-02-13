@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 class ProductListFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var productAdapter : ProductAdapter
-    private lateinit var productList: List<Product>
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
@@ -21,11 +20,10 @@ class ProductListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         recyclerView = view.findViewById(R.id.recyclerView)
-
         val products = convertProductData(com.cs4520.assignment1.productsDataset)
-
         productAdapter = ProductAdapter(products)
         recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter = productAdapter
     }
 
     private fun convertProductData(dataset: List<List<Any?>>): List<Product> {
